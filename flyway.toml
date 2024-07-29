@@ -3,8 +3,7 @@ name = "FlywayTrialProject"
 databaseType = "SqlServer"
 
 [environments.development]
-url = "jdbc:sqlserver://localhost;databaseName=WidgetDev;encrypt=true;integratedSecurity=true;trustServerCertificate=true"
-schemas = [ ]
+url = "jdbc:sqlserver://BROSATO-5366;databaseName=WidgetDev;encrypt=true;integratedSecurity=true;trustServerCertificate=true"
 displayName = "Development database"
 
 [environments.shadow]
@@ -27,7 +26,6 @@ defaultSchema = "dbo"
 baselineOnMigrate = true
 baselineVersion = "001_20230703120714"
 
-
 [flywayDesktop]
 developmentEnvironment = "development"
 shadowEnvironment = "shadow"
@@ -43,7 +41,7 @@ filterFile = "Filter.scpf"
 addCreateOrAlterForRerunnableScripts = false
 addDropAndCreateForRerunnableScripts = false
 addNoPopulationToFulltextIndexes = false
-addObjectExistenceChecks = false
+addObjectExistenceChecks = true
 addOnlineOnWhenCreatingIndexesOrAlteringColumns = false
 addWithEncryption = false
 considerNextFilegroupInPartitionSchemes = true
