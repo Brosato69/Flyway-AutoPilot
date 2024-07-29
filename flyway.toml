@@ -34,8 +34,9 @@ schemaModel = "./schema-model"
   [flywayDesktop.generate]
   undoScripts = true
 
-[redgateCompare.sqlserver]
-filterFile = "Filter.scpf"
+[redgateCompare]
+  [redgateCompare.sqlserver]
+  filterFile = "Filter.scpf"
 
 [redgateCompare.sqlserver.options.behavior]
 addCreateOrAlterForRerunnableScripts = false
@@ -107,7 +108,7 @@ ignoreWithNoCheck = true
 
 [redgateCompare.sqlserver.data.options.mapping]
 includeTimestampColumns = false
-useCaseSensitiveObjectDefinition = true
+useCaseSensitiveObjectDefinition = false
 
 [redgateCompare.sqlserver.data.options.comparison]
 compressTemporaryFiles = false
